@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  
+spring:
+  rabbitmq:
+    host: localhost
+    username: scullertest
+    password: hcFIFA2019
+    
+sculler:
+  rabbitmq:
+    exchange: testmq.exchange
+    queue: testmq.queue
+    routingkey: testmq.routingkey
+    topicexchange: testmq.topicex
