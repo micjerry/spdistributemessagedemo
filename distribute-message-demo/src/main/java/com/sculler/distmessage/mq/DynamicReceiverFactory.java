@@ -23,7 +23,8 @@ public class DynamicReceiverFactory {
 	
 	
 	public void addConsumer(String queueName, String exchange, String routingKey, StudentHandler handler) {
-		Queue queue = new Queue(queueName, false);
+		//temp queue
+		Queue queue = new Queue(queueName, false, true, true);
 		Binding binding = new Binding(queueName, Binding.DestinationType.QUEUE, exchange, routingKey, null);
 		admin.declareExchange(new TopicExchange(exchange));;
 		admin.declareQueue(queue);
